@@ -16,7 +16,7 @@ public class EleveService {
 	
 	public int tibborel(int note)
 	{
-		if (!isPositiveNote(note) || note > 20){
+		if (!isPositiveNote(note) || note > 20) {
 			return -1;
 		}
 		String name = "Tibère Borel";
