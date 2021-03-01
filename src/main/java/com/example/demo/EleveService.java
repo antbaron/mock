@@ -15,8 +15,13 @@ public class EleveService {
 	}
 	
 	
-	public int cedrouichi( ) {
-		return 0;
+	public int cedrouichi(int note) {
+		if (!isPositiveNote(note) || note > 20){
+			return -1;
+		}
+		String name = "Cédric ROUICHI";
+		eleveRepository.addEleve(new Eleve(name, note));
+		return eleveRepository.findMean(name);
 	}
 	
 }
