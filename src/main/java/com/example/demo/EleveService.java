@@ -21,16 +21,5 @@ public class EleveService {
 		return mean;
 	}
 	
-	public int aleledain(int num) {
-
-		if(isPositiveNote(num)) {
-			eleveRepository.addEleve(new Eleve("Alex", num));
-			eleveRepository.findMean("Alex");		
-		}
-		return -1;
-	}
-	
-	
-	
 	
 }
