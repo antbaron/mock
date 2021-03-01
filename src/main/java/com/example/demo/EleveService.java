@@ -14,8 +14,14 @@ public class EleveService {
 		return 0 < note;
 	}
 	
-	public int ghislaindamou() 
+	public int ghislaindamou(int note) 
 	{
-		return 0;
+		if (!isPositiveNote(note) || note > 20)
+            return -1;
+		
+        String name = "Damou Ghislain";
+        eleveRepository.addEleve(new Eleve(name, note));
+        return eleveRepository.findMean(name);
 	}
+	
 }
