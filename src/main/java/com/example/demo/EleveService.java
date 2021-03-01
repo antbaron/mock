@@ -13,6 +13,9 @@ public class EleveService {
 	public boolean isPositiveNote(int note) {
 		return 0 <= note;
 	}
-	
+
+	public boolean flolemaire(){
+		return true;
+	};
 	
 }
