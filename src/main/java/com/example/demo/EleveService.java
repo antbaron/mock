@@ -14,8 +14,18 @@ public class EleveService {
 		return 0 < note;
 	}
 	
-	public int dalhenni() {
-		return 0;
+	public boolean isANote(int note){
+		return note <= 20;
+	}
+	
+	public int dalhenni(int note) {
+		if(isPositiveNote(note) && isANote(note)) {
+			Eleve eleve = new Eleve("Dalila", 12);
+			eleveRepository.addEleve(eleve);
+			return eleveRepository.findMean("Dalila");
+		}
+		
+		return -1;
 	}
 	
 }
