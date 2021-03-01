@@ -13,8 +13,13 @@ public class EleveService {
 		return 0 <= note;
 	}
 	
-	public int aleledain() {
-		return 0;
+	public int aleledain(int num) {
+
+		if(isPositiveNote(num)) {
+			eleveRepository.addEleve(new Eleve("Alex", num));
+			eleveRepository.findMean("Alex");		
+		}
+		return -1;
 	}
 	
 	
