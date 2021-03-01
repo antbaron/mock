@@ -14,8 +14,12 @@ public class EleveService {
 		return 0 < note;
 	}
 	
-	public int mathieu() {
-		return 0;
+	public int mathieu(int note) {
+		if (note < 0 || note > 20) {
+			return -1;
+		}
+		Eleve eleve = new Eleve("Mathieu", note)
+		eleveRepository.addEleve(eleve);
+		return eleveRepository.findMean(nom);
 	}
-	
 }
