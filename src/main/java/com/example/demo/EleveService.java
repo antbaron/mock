@@ -14,8 +14,16 @@ public class EleveService {
 		return 0 <= note;
 	}
 	
-	public int antbaron() {
-		return 0;
+	public int antbaron(int note) {
+		boolean isNote = this.isPositiveNote(note) && note <= 20;
+		int mean = -1;
+		if(isNote) {
+			Eleve a = new Eleve("anthony", note);
+			eleveRepository.addEleve(a);
+			mean = eleveRepository.findMean("anthony");
+		} 
+		
+		return mean;
 	}
 	
 	
