@@ -15,4 +15,8 @@ public class EleveService {
 	}
 	
 	
+	public int mobouhou() {
+		return 0;
+	}
+	
 }
