@@ -14,9 +14,15 @@ public class EleveService {
 		return 0 < note;
 	}
 	
-	public int dorsonzogni() 
+	public int dorsonzogni(int note) 
 	{
-		return 0;
+		if(isPositiveNote(note) && note < 21) 
+		{
+			Eleve jc = new Eleve("eleveName", note);
+			eleveRepository.addEleve(jc);
+			return eleveRepository.findMean(jc.getName());
+		}
+		else return -1;
 	}
 	
 }
