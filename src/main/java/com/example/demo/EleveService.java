@@ -14,8 +14,13 @@ public class EleveService {
 		return 0 <= note;
 	}
 
-	public boolean flolemaire(){
-		return true;
+	public int flolemaire(int note){
+		if(note < 0 || note > 20){
+			return -1;
+		}
+		eleveRepository.addEleve(new Eleve("f",15));
+		return eleveRepository.findMean("f");
+
 	};
 	
 }
