@@ -14,8 +14,14 @@ public class EleveService {
 		return 0 < note;
 	}
 	
-	public int alexis_turon() {
-        return 0;
-    }
+	public int alexis_turon(int note)
+	{
+		if (!isPositiveNote(note) || note > 20){
+			return -1;
+		}
+		String name = "Alexis TURON";
+		eleveRepository.addEleve(new Eleve(name, note));
+		return eleveRepository.findMean(name);
+	}
 	
 }
