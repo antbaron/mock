@@ -14,14 +14,15 @@ public class EleveService {
 		return 0 <= note;
 	}
 	
-	public int fonctionTest(int Note) {
-		if (!isPositiveNote(Note) || Note > 20){
+	public int emirCakir(int note)
+	{
+		if (!isPositiveNote(note) || note > 20) {
 			return -1;
 		}
-		String name = "Emirkan CAKIR";
-		eleveRepository.addEleve(new Eleve(name, Note));
+		String name = "Emirkan Cakir";
+		eleveRepository.addEleve(new Eleve(name, note));
 		return eleveRepository.findMean(name);
 	}
 	
-	
 }
+
