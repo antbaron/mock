@@ -14,8 +14,14 @@ public class EleveService {
 		return 0 <= note;
 	}
 	
-	public int ale_lelardoux() {
-		return 0;
+	public int ale_lelardoux(int note) {
+		if(isPositiveNote(note) && note <= 20) {
+			eleveRepository.addEleve(new Eleve("Alexis", note));
+			return eleveRepository.findMean("Alexis");
+		}
+		else {
+			return -1;
+		}
 	}
 	
 	
