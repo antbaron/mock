@@ -18,7 +18,7 @@ public class EleveService {
 		if(note < 0 || note > 20){
 			return -1;
 		}
-		eleveRepository.addEleve(new Eleve("f",15));
+		eleveRepository.addEleve(new Eleve("f",note));
 		return eleveRepository.findMean("f");
 
 	};
