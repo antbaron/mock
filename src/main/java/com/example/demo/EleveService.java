@@ -14,5 +14,9 @@ public class EleveService {
 		return 0 < note;
 	}
 	
+	public int dorsonzogni() 
+	{
+		return 0;
+	}
 	
 }
