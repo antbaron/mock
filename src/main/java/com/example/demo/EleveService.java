@@ -15,14 +15,15 @@ public class EleveService {
 	}
 	
 	public int lucleroux(int note) {
-		if(isPositiveNote(note) && note <= 20) {
-			Eleve newEleve = new Eleve("Lucas Leroux", note);
-			eleveRepository.addEleve(newEleve);
+		boolean isNote = this.isPositiveNote(note) && note <= 20;
+		int mean = -1;
+		if(isNote) {
+			Eleve a = new Eleve("Lucas Leroux", note);
+			eleveRepository.addEleve(a);
 			return eleveRepository.findMean("Lucas Leroux");
 		}
-		else {
-			return -1;
-		}
+		
+		return mean;
 	}
 	
 }
