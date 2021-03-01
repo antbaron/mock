@@ -17,7 +17,7 @@ public class EleveService {
 	public int sebuc4(int note) {
 		
 		// verifier que c'est une note
-		if(note < 0 && note > 20) {
+		if(note < 0 || note > 20) {
 			// return -1 si incorrect
 			return -1;
 		} else {
