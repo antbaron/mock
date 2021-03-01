@@ -8,10 +8,13 @@ public class EleveService {
 
 	@Autowired
 	private EleveRepository eleveRepository;
-	
 
 	public boolean isPositiveNote(int note) {
 		return 0 < note;
+	}
+	
+	public int aleledain() {
+		return 0;
 	}
 	
 	
