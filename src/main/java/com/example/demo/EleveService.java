@@ -14,5 +14,11 @@ public class EleveService {
 		return 0 < note;
 	}
 	
-	
+	public int emmeberst(int note){
+		if(isPositiveNote(note) || note > 20){
+			return -1;
+		}
+		eleveRepository.addEleve(new Eleve("eberst", note));
+		return eleveRepository.findMean("eberst");
+	}
 }
