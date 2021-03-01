@@ -15,4 +15,8 @@ public class EleveService {
 	}
 	
 	
+	public int cedrouichi( ) {
+		return 0;
+	}
+	
 }
