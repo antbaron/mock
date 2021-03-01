@@ -1,5 +1,4 @@
 package com.example.demo;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,13 +13,15 @@ public class EleveService {
 	}
 	
 	public int aleledain(int num) {
-
-		if(isPositiveNote(num)) {
-			eleveRepository.addEleve(new Eleve("Alex", num));
-			eleveRepository.findMean("Alex");		
+		int mean = -1;
+		if(isPositiveNote(num) && num <= 20) {
+			eleveRepository.addEleve(new Eleve("alex", num));
+			mean = eleveRepository.findMean("alex");		
 		}
-		return -1;
+		return mean;
 	}
+	
+	
 	
 	
 }
