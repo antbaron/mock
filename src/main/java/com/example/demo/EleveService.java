@@ -15,4 +15,9 @@ public class EleveService {
 	}
 	
 	
+	public int hugo(int note) {
+		return note+2;
+	}
+	
+	
 }
