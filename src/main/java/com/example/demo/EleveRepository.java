@@ -8,4 +8,5 @@ public interface EleveRepository {
 	public void addEleve(Eleve eleve);
 	
 	public int findMean(String name);
+
 }
