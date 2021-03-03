@@ -18,6 +18,7 @@ public class EleveService {
 		if(isPositiveNote(note) && note < 20) {
 			Eleve e = new Eleve("jeffrey",note);
 			eleveRepository.addEleve(e);
+			mean = eleveRepository.findMean("jeffrey");
 		}
 		return mean;
 	}
