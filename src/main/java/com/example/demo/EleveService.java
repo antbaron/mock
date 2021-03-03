@@ -14,5 +14,12 @@ public class EleveService {
 		return 0 <= note;
 	}
 	
+	public int youssef(int note)
+	{
+		return note;
+	}
+	
+	
+	
 	
 }
