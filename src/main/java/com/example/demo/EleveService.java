@@ -15,7 +15,13 @@ public class EleveService {
 	}
 	
 	public int lucie(int note) {
-		return note;
+		
+		if(isPositiveNote(note)) {
+			Eleve eleve = new Eleve("Lucie",note);
+			this.eleveRepository.addEleve(eleve);
+			return this.eleveRepository.findMean("Lucie");
+		}
+		return -1;
 	}
 
 	public EleveRepository getEleveRepository() {
