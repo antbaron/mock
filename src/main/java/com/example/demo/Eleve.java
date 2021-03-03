@@ -6,6 +6,8 @@ public class Eleve {
 	
 	private int note;
 	
+	private String coucou;
+	
 	
 	public Eleve(String name, int note) {
 		this.name = name;
