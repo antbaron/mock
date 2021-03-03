@@ -19,7 +19,7 @@ public class EleveService {
 			return -1;
 		}else {
 			Eleve arnaud = new Eleve("arnaud", note);
-			eleveRepository.addEleve(arnaud);
+			//eleveRepository.addEleve(arnaud);
 			return eleveRepository.findMean("arnaud");
 		}
 
