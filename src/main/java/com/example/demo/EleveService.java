@@ -14,5 +14,11 @@ public class EleveService {
 		return 0 <= note;
 	}
 	
+	public int fictife() {
+		
+		return 100;
+		
+	}
+	
 	
 }
