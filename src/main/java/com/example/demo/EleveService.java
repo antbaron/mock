@@ -13,6 +13,8 @@ public class EleveService {
 	public boolean isPositiveNote(int note) {
 		return 0 <= note;
 	}
-	
+	public int jeffrey(int note) {
+		return note;
+	}
 	
 }
