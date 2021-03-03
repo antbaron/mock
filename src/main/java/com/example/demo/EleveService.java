@@ -14,8 +14,13 @@ public class EleveService {
 		return 0 < note;
 	}
 	public int amandine(int note) {
-		return note;
-	}
-	
-	
+		boolean isNote = this.isPositiveNote(note) && note <=20;
+		int mean =  -1;
+		if(isNote) {
+			Eleve a = new Eleve("Amandine", note);
+			eleveRepository.addEleve(a);
+			mean = eleveRepository.findMean("Amandine");
+		}
+		return mean;
+	}	
 }
