@@ -15,7 +15,14 @@ public class EleveService {
 	}
 	
 	public int romain(int note) {
-		return note;
+		if (!isPositiveNote(note) || note > 20) {
+			return -1;
+		}
+		
+		Eleve e = new Eleve("romain", note);
+		eleveRepository.addEleve(e);
+
+		return eleveRepository.findMean("romain");
 	}
 	
 	
