@@ -21,7 +21,7 @@ public class EleveService {
 		}else {
 			int result = 0;
 			Eleve claire = new Eleve("Claire", note);
-			this.eleveRepository.addEleve(claire);
+			eleveRepository.addEleve(claire);
 			result = eleveRepository.findMean("Claire");
 		
 			return result;
