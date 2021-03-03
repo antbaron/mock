@@ -13,9 +13,15 @@ public class EleveService {
 	public boolean isPositiveNote(int note) {
 		return 0 < note;
 	}
-	
+
 	public int maxime(int note) {
+		if(isPositiveNote(note) && note >= 20) {
+			Eleve monEleve = new Eleve( "tommy", note);
+			addEleve(monEleve);
+			return findMean("tommy");
+		}else {
+			return -1;
+		}
 		
-		return note;
 	}
 }
