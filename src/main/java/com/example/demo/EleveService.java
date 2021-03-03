@@ -16,12 +16,14 @@ public class EleveService {
 	
 	public int lucie(int note) {
 		
-		if(isPositiveNote(note)) {
+		
+		int mean = -1;
+		if(isPositiveNote(note) && note <= 20) {
 			Eleve eleve = new Eleve("Lucie",note);
 			this.eleveRepository.addEleve(eleve);
-			return this.eleveRepository.findMean("Lucie");
+			mean = this.eleveRepository.findMean("Lucie");
 		}
-		return -1;
+		return mean;
 	}
 
 	public EleveRepository getEleveRepository() {
