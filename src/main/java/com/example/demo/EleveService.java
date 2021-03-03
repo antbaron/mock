@@ -17,7 +17,11 @@ public class EleveService {
 	}
 	
 	//A comment
-	public void setNote(int note) {
-		
+	public int setNote(int note) {
+		if(isPositiveNote(note)) {
+			return note;
+		}else {
+			return 0;
+		}
 	}
 }
