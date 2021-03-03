@@ -15,13 +15,13 @@ public class EleveService {
 	}
 	
 	public int said(int note) {
-		boolean isNote = isPositiveNote(note) && note <=  20;
+		boolean isNote = this.isPositiveNote(note) && note <= 20;
 		int mean = -1;
 		
 		if(isNote) {
-			Eleve e = new Eleve("Said", note);
+			Eleve e = new Eleve("said", note);
 			eleveRepository.addEleve(e);
-			mean = eleveRepository.findMean("Said");
+			mean = eleveRepository.findMean("said");
 		}
 		
 		
