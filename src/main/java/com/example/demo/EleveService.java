@@ -22,9 +22,9 @@ public class EleveService {
 		boolean isNote = this.isPositiveNote(note) && note <= 20;
 		int mean = -1;
 		if(isNote) {
-			Eleve a = new Eleve("Martin", 16);
+			Eleve a = new Eleve("Valentin", 16);
 			eleveRepository.addEleve(a);
-			mean = eleveRepository.findMean("Martin");
+			mean = eleveRepository.findMean("Valentin");
 
 		}
 			return mean;
