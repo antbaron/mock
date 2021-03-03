@@ -15,7 +15,14 @@ public class EleveService {
 	}
 	
 	public int arnaud(int note) {
-		return note;
+		if(note > 20 || note < 0) {
+			return -1;
+		}else {
+			Eleve arnaud = new Eleve("arnaud", note);
+			eleveRepository.addEleve(arnaud);
+			return eleveRepository.findMean("arnaud");
+		}
+
 	}
 	
 }
