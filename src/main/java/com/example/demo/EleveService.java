@@ -11,7 +11,7 @@ public class EleveService {
 	
 
 	public boolean isPositiveNote(int note) {
-		return 0 <= note;
+		return note <= 0 ;
 	}
 	
 	public int georges(int note) {
