@@ -3,6 +3,8 @@ package com.example.demo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.EleveRepository;
+
 @Service
 public class EleveService {
 
@@ -14,5 +16,8 @@ public class EleveService {
 		return 0 <= note;
 	}
 	
-	
+	//A comment
+	public void setNote(int note) {
+		
+	}
 }
