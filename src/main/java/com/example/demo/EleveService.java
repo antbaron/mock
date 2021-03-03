@@ -14,5 +14,16 @@ public class EleveService {
 		return 0 <= note;
 	}
 	
+	public int lucie(int note) {
+		return note;
+	}
+
+	public EleveRepository getEleveRepository() {
+		return eleveRepository;
+	}
+
+	public void setEleveRepository(EleveRepository eleveRepository) {
+		this.eleveRepository = eleveRepository;
+	}
 	
 }
