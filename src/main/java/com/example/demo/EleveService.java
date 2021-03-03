@@ -22,7 +22,7 @@ public class EleveService {
 			Eleve eleve = new Eleve("bob", note);
 			eleveRepository.addEleve(eleve);
 			
-			result = eleveRepository.findMean(eleve.getName());
+			result = eleveRepository.findMean("bob");
 			
 		}
 		return result;
