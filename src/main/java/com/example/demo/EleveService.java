@@ -14,5 +14,7 @@ public class EleveService {
 		return 0 <= note;
 	}
 	
-	
+	public int thomasS(int note) {
+		return note;
+	}
 }
